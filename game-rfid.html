@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT FEST - RFID Quiz VS</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <img src="assets/img/logo.png" alt="Logo IDH" class="top-left-logo" />
+    <div class="main-wrapper">
+      <header>
+        <a href="index.html" class="btn-back">⬅ Menu Utama</a>
+        <h1 class="title-small">RFID QUIZ VS</h1>
+      </header>
+
+      <div id="setup-container" class="display-container">
+        <h3>Masukkan Nama Pemain</h3>
+        <input
+          type="text"
+          id="p1-name"
+          placeholder="Nama Pemain 1"
+          class="input-style"
+        />
+        <input
+          type="text"
+          id="p2-name"
+          placeholder="Nama Pemain 2"
+          class="input-style"
+        />
+        <button onclick="startGame()" class="btn-start">Mulai Game</button>
+      </div>
+
+      <div id="quiz-container" class="display-container" style="display: none">
+        <div class="turn-indicator">
+          Giliran: <span id="current-player-name">-</span>
+        </div>
+        <div id="question-box">
+          <h2 id="question-text">Loading Soal...</h2>
+          <ul id="options-list"></ul>
+        </div>
+        <div class="feedback-icon" id="feedback-icon"></div>
+      </div>
+
+      <div
+        id="result-container"
+        class="display-container"
+        style="display: none"
+      >
+        <h2>Hasil Akhir</h2>
+        <div id="final-scores"></div>
+        <button onclick="location.reload()" class="btn-start">Main Lagi</button>
+      </div>
+      <footer class="main-footer">
+        <p>&copy; 2026 IDN Boarding School.</p>
+      </footer>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database-compat.js"></script>
+    <script src="assets/js/rfid.js"></script>
+  </body>
+</html>

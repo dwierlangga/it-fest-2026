@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT FEST - Monitoring Lingkungan</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+    <img src="assets/img/logo.png" alt="Logo IDH" class="top-left-logo" />
+
+    <div class="main-wrapper">
+      <header>
+        <a href="index.html" class="btn-back">⬅ Menu Utama</a>
+        <h1 class="title-small">MONITORING LINGKUNGAN</h1>
+      </header>
+
+      <div class="sensor-grid">
+        <div class="sensor-card">
+          <div class="sensor-icon">🌡️</div>
+          <h4>Suhu</h4>
+          <div class="sensor-value"><span id="val-suhu">0</span>°C</div>
+        </div>
+        <div class="sensor-card">
+          <div class="sensor-icon">💧</div>
+          <h4>Kelembapan</h4>
+          <div class="sensor-value"><span id="val-hum">0</span>%</div>
+        </div>
+        <div class="sensor-card">
+          <div class="sensor-icon">☁️</div>
+          <h4>Tekanan</h4>
+          <div class="sensor-value"><span id="val-pres">0</span> hPa</div>
+        </div>
+        <div class="sensor-card">
+          <div class="sensor-icon">💨</div>
+          <h4>Kualitas Gas</h4>
+          <div class="sensor-value"><span id="val-gas">0</span> ppm</div>
+        </div>
+      </div>
+
+      <div
+        class="charts-wrapper"
+        style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 15px;
+          margin-top: 25px;
+        "
+      >
+        <div class="chart-box-mini">
+          <h5 style="color: #ff4b2b">Tren Suhu</h5>
+          <canvas id="tempChart"></canvas>
+        </div>
+
+        <div class="chart-box-mini">
+          <h5 style="color: #00d2ff">Tren Kelembapan</h5>
+          <canvas id="humChart"></canvas>
+        </div>
+
+        <div class="chart-box-mini">
+          <h5 style="color: #f1c40f">Tren Tekanan</h5>
+          <canvas id="presChart"></canvas>
+        </div>
+
+        <div class="chart-box-mini">
+          <h5 style="color: #2ecc71">Tren Gas</h5>
+          <canvas id="gasChart"></canvas>
+        </div>
+      </div>
+
+      <footer class="main-footer">
+        <p>&copy; 2026 IDN Boarding School.</p>
+      </footer>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database-compat.js"></script>
+    <script src="assets/js/monitoring.js"></script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT FEST - Smart Conveyor</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <img src="assets/img/logo.png" alt="Logo IDH" class="top-left-logo" />
+
+    <div class="main-wrapper">
+        <header>
+            <a href="index.html" class="btn-back">⬅ Menu Utama</a>
+            <h1 class="title-small">SMART COLOR</h1>
+            <p class="subtitle">DETEKSI WARNA OTOMATIS</p>
+        </header>
+
+        <div class="sortir-container">
+            <div id="color-display" class="color-box-full">
+                <div class="status-label">STATUS SISTEM: ONLINE</div>
+                <h2 id="text-warna">MENUNGGU BENDA...</h2>
+                <div class="scan-line"></div>
+            </div>
+        </div>
+
+        <footer class="main-footer">
+            <p>&copy; 2026 IDN Boarding School. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database-compat.js"></script>
+    <script src="assets/js/sortir.js"></script>
+</body>
+</html>
